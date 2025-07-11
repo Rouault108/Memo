@@ -17,10 +17,8 @@ jobs:
           node-version: "22"
       - name: Install Dependencies
         run: npm ci
-      - name: Build & Export
-        run: |
-          npm run build
-          npm run export
+      - name: Build
+        run: npm run build
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
